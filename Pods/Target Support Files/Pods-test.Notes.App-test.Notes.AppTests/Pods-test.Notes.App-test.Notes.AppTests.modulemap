@@ -1,0 +1,6 @@
+framework module Pods_test_Notes_App_test_Notes_AppTests {
+  umbrella header "Pods-test.Notes.App-test.Notes.AppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

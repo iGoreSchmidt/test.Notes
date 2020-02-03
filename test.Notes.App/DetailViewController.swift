@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+public class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
@@ -22,13 +22,13 @@ class DetailViewController: UIViewController {
         }
     }
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         configureView()
     }
 
-    var detailItem: NSDate? {
+    public var detailItem: NSDate? {
         didSet {
             // Update the view.
             configureView()
