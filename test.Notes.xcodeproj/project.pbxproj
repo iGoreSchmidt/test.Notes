@@ -10,16 +10,21 @@
 		058697425A78619ED45EB2E1 /* Pods_test_Notes_Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD34D2FAFD3D51A6FBD1126A /* Pods_test_Notes_Model.framework */; };
 		1C4DEAF25188B06227B18CBD /* Pods_test_Notes_App_test_Notes_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4066F868931E0205EFE2AE /* Pods_test_Notes_App_test_Notes_AppTests.framework */; };
 		30060AD3AF89B06EBE4F5F3B /* Pods_test_Notes_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AAD46D55A539332E15501 /* Pods_test_Notes_API.framework */; };
+		84164E5123E98934008DC3E8 /* NoteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84164E5023E98934008DC3E8 /* NoteRequest.swift */; };
+		84164E5323E98996008DC3E8 /* NoteRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84164E5223E98996008DC3E8 /* NoteRequestImpl.swift */; };
+		84164E5523E99DF6008DC3E8 /* SetupNoteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84164E5423E99DF6008DC3E8 /* SetupNoteRequest.swift */; };
+		84164E5723E99F5B008DC3E8 /* DeleteNoteRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84164E5623E99F5B008DC3E8 /* DeleteNoteRequestImpl.swift */; };
+		84164E5923E99F97008DC3E8 /* DeleteNoteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84164E5823E99F97008DC3E8 /* DeleteNoteRequest.swift */; };
+		84164E5B23E9A1A8008DC3E8 /* SetupNoteRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84164E5A23E9A1A8008DC3E8 /* SetupNoteRequestImpl.swift */; };
 		842D418523E77A2900872340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D418423E77A2900872340 /* AppDelegate.swift */; };
 		842D418723E77A2900872340 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D418623E77A2900872340 /* SceneDelegate.swift */; };
 		842D419323E77A2D00872340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D419123E77A2D00872340 /* LaunchScreen.storyboard */; };
-		842D419E23E77A2D00872340 /* test_NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D419D23E77A2D00872340 /* test_NotesTests.swift */; };
 		842D41B623E77AB500872340 /* test_Notes_Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842D41AD23E77AB500872340 /* test_Notes_Model.framework */; };
 		842D41BF23E77AB500872340 /* test_Notes_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 842D41AF23E77AB500872340 /* test_Notes_Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		842D41D923E77AC800872340 /* test_Notes_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842D41D023E77AC700872340 /* test_Notes_API.framework */; };
+		842D41E023E77AC800872340 /* test_Notes_APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D41DF23E77AC800872340 /* test_Notes_APITests.swift */; };
 		842D41E223E77AC800872340 /* test_Notes_API.h in Headers */ = {isa = PBXBuildFile; fileRef = 842D41D223E77AC700872340 /* test_Notes_API.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		842D41FB23E77B1000872340 /* test_Notes_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842D41F223E77B1000872340 /* test_Notes_App.framework */; };
-		842D420223E77B1000872340 /* test_Notes_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D420123E77B1000872340 /* test_Notes_AppTests.swift */; };
 		842D420423E77B1000872340 /* test_Notes_App.h in Headers */ = {isa = PBXBuildFile; fileRef = 842D41F423E77B1000872340 /* test_Notes_App.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		842D420723E77B1000872340 /* test_Notes_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842D41F223E77B1000872340 /* test_Notes_App.framework */; };
 		842D420823E77B1000872340 /* test_Notes_App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 842D41F223E77B1000872340 /* test_Notes_App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -32,23 +37,22 @@
 		842D421E23E77DF100872340 /* test_Notes_API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 842D41D023E77AC700872340 /* test_Notes_API.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		842D422023E77DF300872340 /* test_Notes_Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842D41AD23E77AB500872340 /* test_Notes_Model.framework */; };
 		842D422123E77DF300872340 /* test_Notes_Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 842D41AD23E77AB500872340 /* test_Notes_Model.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		842D422323E781FD00872340 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D422223E781FD00872340 /* Note.swift */; };
+		842D422523E782A300872340 /* NoteImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D422423E782A300872340 /* NoteImpl.swift */; };
+		842D422723E7838400872340 /* ListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D422623E7838400872340 /* ListRequest.swift */; };
 		842D422923E783AD00872340 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D422823E783AD00872340 /* Request.swift */; };
+		842D422B23E7866400872340 /* ListRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D422A23E7866400872340 /* ListRequestImpl.swift */; };
+		842D422D23E795A500872340 /* RequestManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D422C23E795A500872340 /* RequestManagerImpl.swift */; };
 		842D422F23E823CE00872340 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D422E23E823CE00872340 /* RequestManager.swift */; };
+		842D423123E824A700872340 /* MockProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D423023E824A700872340 /* MockProtocol.swift */; };
+		842D423623E82F3800872340 /* test_Notes_ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D423523E82F3800872340 /* test_Notes_ModelTests.swift */; };
 		87ACDE6602A01309D24D331E /* Pods_test_Notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3388B847FFD26E6FF639EAC5 /* Pods_test_Notes.framework */; };
-		D78F495C981EE1BD20A3AAA0 /* Pods_test_Notes_test_NotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C6703D7CAED17547A5ED73 /* Pods_test_Notes_test_NotesTests.framework */; };
 		DF3575917D6AEBB7713F51EB /* Pods_test_Notes_Model_test_Notes_ModelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAC471911D41A6456D6CD21 /* Pods_test_Notes_Model_test_Notes_ModelTests.framework */; };
 		FB2034F3CF57FD8E4143F96F /* Pods_test_Notes_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074DC4C56EC01E96101819A5 /* Pods_test_Notes_App.framework */; };
 		FEED04553321641CC8256A81 /* Pods_test_Notes_API_test_Notes_APITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECA74C791E220D38816DFB3 /* Pods_test_Notes_API_test_Notes_APITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		842D419A23E77A2D00872340 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 842D417923E77A2900872340 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 842D418023E77A2900872340;
-			remoteInfo = test.Notes;
-		};
 		842D41B723E77AB500872340 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 842D417923E77A2900872340 /* Project object */;
@@ -160,6 +164,12 @@
 		61CDAFE60EFED81453E3C527 /* Pods-test.Notes.Model-test.Notes.ModelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.Notes.Model-test.Notes.ModelTests.release.xcconfig"; path = "Target Support Files/Pods-test.Notes.Model-test.Notes.ModelTests/Pods-test.Notes.Model-test.Notes.ModelTests.release.xcconfig"; sourceTree = "<group>"; };
 		62294FC9EF68BF40B17F013C /* Pods-test.Notes.App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.Notes.App.release.xcconfig"; path = "Target Support Files/Pods-test.Notes.App/Pods-test.Notes.App.release.xcconfig"; sourceTree = "<group>"; };
 		719BCEA552CDF2F7C4433AF4 /* Pods-test.Notes.App-test.Notes.AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.Notes.App-test.Notes.AppTests.debug.xcconfig"; path = "Target Support Files/Pods-test.Notes.App-test.Notes.AppTests/Pods-test.Notes.App-test.Notes.AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		84164E5023E98934008DC3E8 /* NoteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRequest.swift; sourceTree = "<group>"; };
+		84164E5223E98996008DC3E8 /* NoteRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRequestImpl.swift; sourceTree = "<group>"; };
+		84164E5423E99DF6008DC3E8 /* SetupNoteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupNoteRequest.swift; sourceTree = "<group>"; };
+		84164E5623E99F5B008DC3E8 /* DeleteNoteRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteNoteRequestImpl.swift; sourceTree = "<group>"; };
+		84164E5823E99F97008DC3E8 /* DeleteNoteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteNoteRequest.swift; sourceTree = "<group>"; };
+		84164E5A23E9A1A8008DC3E8 /* SetupNoteRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupNoteRequestImpl.swift; sourceTree = "<group>"; };
 		842D418123E77A2900872340 /* test.Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842D418423E77A2900872340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842D418623E77A2900872340 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,9 +179,6 @@
 		842D418F23E77A2D00872340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842D419223E77A2D00872340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842D419423E77A2D00872340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		842D419923E77A2D00872340 /* test.NotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.NotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		842D419D23E77A2D00872340 /* test_NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_NotesTests.swift; sourceTree = "<group>"; };
-		842D419F23E77A2D00872340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842D41AD23E77AB500872340 /* test_Notes_Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = test_Notes_Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		842D41AF23E77AB500872340 /* test_Notes_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test_Notes_Model.h; sourceTree = "<group>"; };
 		842D41B023E77AB500872340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -181,6 +188,7 @@
 		842D41D223E77AC700872340 /* test_Notes_API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test_Notes_API.h; sourceTree = "<group>"; };
 		842D41D323E77AC700872340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842D41D823E77AC800872340 /* test.Notes.APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.Notes.APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		842D41DF23E77AC800872340 /* test_Notes_APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_Notes_APITests.swift; sourceTree = "<group>"; };
 		842D41E123E77AC800872340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842D41F223E77B1000872340 /* test_Notes_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = test_Notes_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		842D41F423E77B1000872340 /* test_Notes_App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test_Notes_App.h; sourceTree = "<group>"; };
@@ -188,8 +196,14 @@
 		842D41FA23E77B1000872340 /* test.Notes.AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.Notes.AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		842D420323E77B1000872340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842D422223E781FD00872340 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		842D422423E782A300872340 /* NoteImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteImpl.swift; sourceTree = "<group>"; };
+		842D422623E7838400872340 /* ListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRequest.swift; sourceTree = "<group>"; };
 		842D422823E783AD00872340 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		842D422A23E7866400872340 /* ListRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRequestImpl.swift; sourceTree = "<group>"; };
+		842D422C23E795A500872340 /* RequestManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerImpl.swift; sourceTree = "<group>"; };
 		842D422E23E823CE00872340 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		842D423023E824A700872340 /* MockProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProtocol.swift; sourceTree = "<group>"; };
+		842D423523E82F3800872340 /* test_Notes_ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_Notes_ModelTests.swift; sourceTree = "<group>"; };
 		93744329CFDF0012AE8626B2 /* Pods-test.Notes.Model.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.Notes.Model.release.xcconfig"; path = "Target Support Files/Pods-test.Notes.Model/Pods-test.Notes.Model.release.xcconfig"; sourceTree = "<group>"; };
 		9B512BD80850C4DED488FBBD /* Pods-test.Notes.API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.Notes.API.debug.xcconfig"; path = "Target Support Files/Pods-test.Notes.API/Pods-test.Notes.API.debug.xcconfig"; sourceTree = "<group>"; };
 		9C6AAD46D55A539332E15501 /* Pods_test_Notes_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_Notes_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,14 +225,6 @@
 			files = (
 				842D420723E77B1000872340 /* test_Notes_App.framework in Frameworks */,
 				87ACDE6602A01309D24D331E /* Pods_test_Notes.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		842D419623E77A2D00872340 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D78F495C981EE1BD20A3AAA0 /* Pods_test_Notes_test_NotesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +312,6 @@
 			isa = PBXGroup;
 			children = (
 				842D418323E77A2900872340 /* test.Notes */,
-				842D419C23E77A2D00872340 /* test.NotesTests */,
 				842D41AE23E77AB500872340 /* test.Notes.Model */,
 				842D41BB23E77AB500872340 /* test.Notes.ModelTests */,
 				842D41D123E77AC700872340 /* test.Notes.API */,
@@ -323,7 +328,6 @@
 			isa = PBXGroup;
 			children = (
 				842D418123E77A2900872340 /* test.Notes.app */,
-				842D419923E77A2D00872340 /* test.NotesTests.xctest */,
 				842D41AD23E77AB500872340 /* test_Notes_Model.framework */,
 				842D41B523E77AB500872340 /* test.Notes.ModelTests.xctest */,
 				842D41D023E77AC700872340 /* test_Notes_API.framework */,
@@ -345,21 +349,13 @@
 			path = test.Notes;
 			sourceTree = "<group>";
 		};
-		842D419C23E77A2D00872340 /* test.NotesTests */ = {
-			isa = PBXGroup;
-			children = (
-				842D419D23E77A2D00872340 /* test_NotesTests.swift */,
-				842D419F23E77A2D00872340 /* Info.plist */,
-			);
-			path = test.NotesTests;
-			sourceTree = "<group>";
-		};
 		842D41AE23E77AB500872340 /* test.Notes.Model */ = {
 			isa = PBXGroup;
 			children = (
 				842D41AF23E77AB500872340 /* test_Notes_Model.h */,
 				842D41B023E77AB500872340 /* Info.plist */,
 				842D423723E879FA00872340 /* Interfaces */,
+				842D422423E782A300872340 /* NoteImpl.swift */,
 			);
 			path = test.Notes.Model;
 			sourceTree = "<group>";
@@ -368,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				842D41BE23E77AB500872340 /* Info.plist */,
+				842D423523E82F3800872340 /* test_Notes_ModelTests.swift */,
 			);
 			path = test.Notes.ModelTests;
 			sourceTree = "<group>";
@@ -377,7 +374,12 @@
 			children = (
 				842D41D223E77AC700872340 /* test_Notes_API.h */,
 				842D41D323E77AC700872340 /* Info.plist */,
+				842D422C23E795A500872340 /* RequestManagerImpl.swift */,
 				842D423223E8256B00872340 /* Interfaces */,
+				842D422A23E7866400872340 /* ListRequestImpl.swift */,
+				84164E5223E98996008DC3E8 /* NoteRequestImpl.swift */,
+				84164E5623E99F5B008DC3E8 /* DeleteNoteRequestImpl.swift */,
+				84164E5A23E9A1A8008DC3E8 /* SetupNoteRequestImpl.swift */,
 			);
 			path = test.Notes.API;
 			sourceTree = "<group>";
@@ -385,7 +387,9 @@
 		842D41DE23E77AC800872340 /* test.Notes.APITests */ = {
 			isa = PBXGroup;
 			children = (
+				842D41DF23E77AC800872340 /* test_Notes_APITests.swift */,
 				842D41E123E77AC800872340 /* Info.plist */,
+				842D423023E824A700872340 /* MockProtocol.swift */,
 			);
 			path = test.Notes.APITests;
 			sourceTree = "<group>";
@@ -430,7 +434,11 @@
 			isa = PBXGroup;
 			children = (
 				842D422823E783AD00872340 /* Request.swift */,
+				842D422623E7838400872340 /* ListRequest.swift */,
 				842D422E23E823CE00872340 /* RequestManager.swift */,
+				84164E5023E98934008DC3E8 /* NoteRequest.swift */,
+				84164E5423E99DF6008DC3E8 /* SetupNoteRequest.swift */,
+				84164E5823E99F97008DC3E8 /* DeleteNoteRequest.swift */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -438,6 +446,7 @@
 		842D423723E879FA00872340 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				842D422223E781FD00872340 /* Note.swift */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -491,26 +500,6 @@
 			productName = test.Notes;
 			productReference = 842D418123E77A2900872340 /* test.Notes.app */;
 			productType = "com.apple.product-type.application";
-		};
-		842D419823E77A2D00872340 /* test.NotesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 842D41A523E77A2D00872340 /* Build configuration list for PBXNativeTarget "test.NotesTests" */;
-			buildPhases = (
-				E1061850C869F2C4BDABAD0B /* [CP] Check Pods Manifest.lock */,
-				842D419523E77A2D00872340 /* Sources */,
-				842D419623E77A2D00872340 /* Frameworks */,
-				842D419723E77A2D00872340 /* Resources */,
-				0BC3697A58C24911D5A51618 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				842D419B23E77A2D00872340 /* PBXTargetDependency */,
-			);
-			name = test.NotesTests;
-			productName = test.NotesTests;
-			productReference = 842D419923E77A2D00872340 /* test.NotesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		842D41AC23E77AB500872340 /* test.Notes.Model */ = {
 			isa = PBXNativeTarget;
@@ -649,10 +638,6 @@
 					842D418023E77A2900872340 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
-					842D419823E77A2D00872340 = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 842D418023E77A2900872340;
-					};
 					842D41AC23E77AB500872340 = {
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1130;
@@ -693,7 +678,6 @@
 			projectRoot = "";
 			targets = (
 				842D418023E77A2900872340 /* test.Notes */,
-				842D419823E77A2D00872340 /* test.NotesTests */,
 				842D41AC23E77AB500872340 /* test.Notes.Model */,
 				842D41B423E77AB500872340 /* test.Notes.ModelTests */,
 				842D41CF23E77AC700872340 /* test.Notes.API */,
@@ -710,13 +694,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				842D419323E77A2D00872340 /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		842D419723E77A2D00872340 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,23 +764,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0BC3697A58C24911D5A51618 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-test.Notes-test.NotesTests/Pods-test.Notes-test.NotesTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-test.Notes-test.NotesTests/Pods-test.Notes-test.NotesTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-test.Notes-test.NotesTests/Pods-test.Notes-test.NotesTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		12DD0171058BE252F731486F /* [CP] Check Pods Manifest.lock */ = {
@@ -967,28 +927,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-test.Notes.Model-test.Notes.ModelTests/Pods-test.Notes.Model-test.Notes.ModelTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E1061850C869F2C4BDABAD0B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-test.Notes-test.NotesTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FAB5AF866BFBDD5153650E8A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1028,16 +966,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				842D422323E781FD00872340 /* Note.swift in Sources */,
+				842D422523E782A300872340 /* NoteImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		842D41B123E77AB500872340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842D423623E82F3800872340 /* test_Notes_ModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		842D41CC23E77AC700872340 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				842D422F23E823CE00872340 /* RequestManager.swift in Sources */,
+				84164E5523E99DF6008DC3E8 /* SetupNoteRequest.swift in Sources */,
+				842D422723E7838400872340 /* ListRequest.swift in Sources */,
+				84164E5B23E9A1A8008DC3E8 /* SetupNoteRequestImpl.swift in Sources */,
+				842D422B23E7866400872340 /* ListRequestImpl.swift in Sources */,
 				842D422923E783AD00872340 /* Request.swift in Sources */,
+				842D422D23E795A500872340 /* RequestManagerImpl.swift in Sources */,
+				84164E5923E99F97008DC3E8 /* DeleteNoteRequest.swift in Sources */,
+				84164E5723E99F5B008DC3E8 /* DeleteNoteRequestImpl.swift in Sources */,
+				84164E5323E98996008DC3E8 /* NoteRequestImpl.swift in Sources */,
+				84164E5123E98934008DC3E8 /* NoteRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1045,6 +1000,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842D41E023E77AC800872340 /* test_Notes_APITests.swift in Sources */,
+				842D423123E824A700872340 /* MockProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1067,11 +1024,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		842D419B23E77A2D00872340 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 842D418023E77A2900872340 /* test.Notes */;
-			targetProxy = 842D419A23E77A2D00872340 /* PBXContainerItemProxy */;
-		};
 		842D41B823E77AB500872340 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 842D41AC23E77AB500872340 /* test.Notes.Model */;
@@ -1295,48 +1247,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		842D41A623E77A2D00872340 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B3DEA0CBA01066FC3356EDC /* Pods-test.Notes-test.NotesTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = test.NotesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cz.BSC.test-NotesTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test.Notes.app/test.Notes";
-			};
-			name = Debug;
-		};
-		842D41A723E77A2D00872340 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D5C9C24C09143EFBF887E13 /* Pods-test.Notes-test.NotesTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = test.NotesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cz.BSC.test-NotesTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test.Notes.app/test.Notes";
 			};
 			name = Release;
 		};
@@ -1654,15 +1564,6 @@
 			buildConfigurations = (
 				842D41A323E77A2D00872340 /* Debug */,
 				842D41A423E77A2D00872340 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		842D41A523E77A2D00872340 /* Build configuration list for PBXNativeTarget "test.NotesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				842D41A623E77A2D00872340 /* Debug */,
-				842D41A723E77A2D00872340 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
