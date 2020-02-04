@@ -1,0 +1,33 @@
+### Headers settings
+company: Ing. Igor Shmidt
+
+### Xcode project settings
+project_name: test.Notes
+xcodeproj_path: test.Notes.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: test.Notes.App
+
+# The file path for new modules
+project_file_path: test.Notes.App/
+
+# The Xcode group path to new modules
+project_group_path: test.Notes.App/
+
+### Tests generation settings section
+# The tests target name
+test_target: test.Notes.AppTests
+
+# The file path for new tests
+test_file_path: test.Notes.AppTests/
+
+# The Xcode group path to new tests
+test_group_path: test.Notes.AppTests/
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: swifty_viper}

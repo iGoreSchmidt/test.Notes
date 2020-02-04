@@ -12,13 +12,17 @@ public class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
+    public var detailItem: Any? {
+        didSet {
+            // Update the view.
+            configureView()
+        }
+    }
 
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
-            }
+            detailDescriptionLabel?.text = String(describing: detail)
         }
     }
 
@@ -27,14 +31,5 @@ public class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         configureView()
     }
-
-    public var detailItem: NSDate? {
-        didSet {
-            // Update the view.
-            configureView()
-        }
-    }
-
-
 }
 
