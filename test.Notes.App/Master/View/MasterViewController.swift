@@ -9,7 +9,7 @@ import protocol test_Notes_Model.Note
 
 import UIKit
 
-public class MasterViewController: UITableViewController {
+public class MasterViewController: UITableViewController, MasterViewInput {
     @IBOutlet weak var loader: UIActivityIndicatorView! {
         didSet {
             loader.transform = .init(scaleX: 1.333, y: 1.333)
@@ -42,19 +42,6 @@ public class MasterViewController: UITableViewController {
         loader = loaderView
     }
 
-    // MARK: MasterViewInput
-    public func setupInitialState() {
-        navigationItem.title = "Notes"
-        navigationItem.leftBarButtonItem = editButtonItem
-
-        navigationItem.rightBarButtonItem = .init(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject))
-        if let split = splitViewController {
-            detailViewController = (split.viewControllers.last as? UINavigationController)?
-                .topViewController as? DetailViewController
-        }
-    }
-
-
     override public func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
@@ -62,6 +49,7 @@ public class MasterViewController: UITableViewController {
 
     @objc
     func insertNewObject() {
+        closeDetail()
         output.addNew()
     }
 
@@ -72,18 +60,11 @@ public class MasterViewController: UITableViewController {
         controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         controller.navigationItem.leftItemsSupplementBackButton = true
 
-        if let indexPath = tableView.indexPathForSelectedRow,
-            notes.indices.contains(indexPath.row) {
-            controller.detailItem = notes[indexPath.row]
-            return
-        }
         if let id = sender as? Int,
             let note = notes.first(where: { $0.id == id }) {
-            controller.detailItem = note
-            return
+            return output.prepare(controller, with: note)
         }
-        controller.detailItem = nil
-        controller.isEditing = true
+        output.prepare(controller, with: nil)
     }
 
     // MARK: - Table View
@@ -122,9 +103,19 @@ public class MasterViewController: UITableViewController {
         guard notes.indices.contains(indexPath.row) else { return }
         output.remove(notes[indexPath.row])
     }
-}
 
-extension MasterViewController: MasterViewInput {
+    // MARK: MasterViewInput
+    public func setupInitialState() {
+        navigationItem.title = "Notes"
+        navigationItem.leftBarButtonItem = editButtonItem
+
+        navigationItem.rightBarButtonItem = .init(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject))
+        if let split = splitViewController {
+            detailViewController = (split.viewControllers.last as? UINavigationController)?
+                .topViewController as? DetailViewController
+        }
+    }
+
     public func showLoading() {
         loader.startAnimating()
         loader.isHidden = false
@@ -148,10 +139,14 @@ extension MasterViewController: MasterViewInput {
 
 extension MasterViewController: MasterViewTransition {
     public func closeDetail() {
+        detailViewController = nil
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
         guard
             let splitViewController = splitViewController,
-            let secondary = detailViewController?.navigationController
+            let master = navigationController
         else { return }
-        splitViewController.collapseSecondaryViewController(secondary, for: splitViewController)
+        splitViewController.viewControllers = [master]
     }
 }

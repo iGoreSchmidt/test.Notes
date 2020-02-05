@@ -24,7 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDe
             let splitViewController = window.rootViewController as? UISplitViewController
         else { return }
         splitViewController.delegate = self
-
+        splitViewController.preferredDisplayMode = UIDevice.current.userInterfaceIdiom == .pad
+            ? .allVisible
+            : .automatic
         guard
             let navigationItem = (splitViewController.viewControllers.last as? UINavigationController)?.topViewController?.navigationItem
         else { return }
@@ -61,7 +63,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDe
     }
 
     // MARK: - Split view
-
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
         guard
             let secondaryAsNavController = secondaryViewController as? UINavigationController,

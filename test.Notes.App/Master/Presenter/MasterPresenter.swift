@@ -6,6 +6,7 @@
 //  Copyright © 2020 Ing. Igor Shmidt. All rights reserved.
 //
 import protocol test_Notes_Model.Note
+import class UIKit.UIViewController
 
 public class MasterPresenter: MasterModuleInput {
     weak var view: MasterViewInput!
@@ -16,6 +17,10 @@ public class MasterPresenter: MasterModuleInput {
 }
 
 extension MasterPresenter: MasterViewOutput {
+    public func prepare(_ destination: UIViewController, with note: Note?) {
+        router.prepare(destination, with: note)
+    }
+
     public func viewIsReady() {
         view.setupInitialState()
         view.showLoading()

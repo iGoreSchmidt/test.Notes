@@ -1,26 +1,27 @@
 //
-//  MasterMasterInteractor.swift
+//  DetailDetailInteractor.swift
 //  test.Notes
 //
-//  Created by zentity on 04/02/2020.
+//  Created by zentity on 05/02/2020.
 //  Copyright © 2020 Ing. Igor Shmidt. All rights reserved.
 //
 import test_Notes_API
+import test_Notes_Model
 import Combine
 
-public class MasterInteractor: MasterInteractorInput {
-    weak var output: MasterInteractorOutput!
+public class DetailInteractor: DetailInteractorInput {
+    weak var output: DetailInteractorOutput!
     let requestSender: RequestManager
 
     init(networking: RequestManager) {
         requestSender = networking
     }
 
-    public func loadList() {
+    public func loadDetails(_ id: Int) {
         do {
             var token: AnyCancellable?
             token = try requestSender
-                .send(ListRequestImpl())
+                .send(NoteRequestImpl(id: id))
                 .sink(
                     receiveCompletion: { [weak self] completion in
                         defer { token = nil }
@@ -29,9 +30,9 @@ public class MasterInteractor: MasterInteractorInput {
                             self?.output.loadFinished(error)
                         }
                     },
-                    receiveValue: { [weak self] list in
+                    receiveValue: { [weak self] details in
                         OperationQueue.main.addOperation {
-                            self?.output.loadFinished(list)
+                            self?.output.loadFinished(details)
                         }
                     }
             )
@@ -40,27 +41,27 @@ public class MasterInteractor: MasterInteractorInput {
         }
     }
 
-    public func deleteItem(with id: Int) {
+    public func save(_ note: Note) {
         do {
             var token: AnyCancellable?
             token = try requestSender
-                .send(DeleteNoteRequestImpl(id: id))
+                .send(SetupNoteRequestImpl(note: note))
                 .sink(
                     receiveCompletion: { [weak self] completion in
                         defer { token = nil }
+                        guard case .failure(let error) = completion else { return }
                         OperationQueue.main.addOperation {
-                            guard case .failure(let error) = completion else {
-                                self?.output.deletionFinished()
-                                return
-                            }
-                            self?.output.deletionFinished(error)
+                            self?.output.saveFinished(error)
                         }
                     },
-                    receiveValue: { _ in }
+                    receiveValue: { [weak self] details in
+                        OperationQueue.main.addOperation {
+                            self?.output.saveFinished(details)
+                        }
+                    }
             )
         } catch {
-            output.deletionFinished(error)
+            output.saveFinished(error)
         }
     }
-
 }

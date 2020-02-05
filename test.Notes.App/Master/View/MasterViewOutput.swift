@@ -6,6 +6,7 @@
 //  Copyright © 2020 Ing. Igor Shmidt. All rights reserved.
 //
 import protocol test_Notes_Model.Note
+import class UIKit.UIViewController
 
 public protocol MasterViewOutput {
     /**
@@ -16,4 +17,6 @@ public protocol MasterViewOutput {
     func remove(_ item: Note)
     func showDetail(for item: Note)
     func addNew()
+
+    func prepare(_ destination: UIViewController, with note: Note?)
 }
